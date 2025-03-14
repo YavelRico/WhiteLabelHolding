@@ -11,15 +11,19 @@
 <body>
     <header></header>
     <main>
-        <form action="send.php" method="POST">
-            <input type="text" name="name" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Email" required>
-            <textarea name="message" placeholder="Tu Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <h2>Contáctanos</h2>
+    <form id="contactForm" method="POST" action="send.php">
+        <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+        <input type="email" id="email" name="email" placeholder="Tu Email" required>
+        <textarea id="message" name="message" placeholder="Tu Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="response"></div>
     </main>
     <footer>
         <p>&copy; 2016 White Label Holding LLC. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,19 +1,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags($_POST["name"]);
-    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars($_POST["message"]);
+    // Recuperar los valores del formulario
+    $name = strip_tags($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars($_POST['message']);
 
-    $to = "yavelwork@gmail.com"; // TU EMAIL
-    $subject = "Nuevo mensaje de contacto";
-    $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+    // Validación básica de campos
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        // Puedes configurar un correo real aquí (sin servidor SMTP para pruebas locales)
+        $to = 'yavelwork@gmail.com'; // Tu correo
+        $subject = 'Nuevo mensaje de contacto';
+        $body = "Nombre: $name\nEmail: $email\nMensaje: $message";
+        $headers = "From: $email";
 
-    $body = "Nombre: $name\nEmail: $email\nMensaje:\n$message";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "¡Mensaje enviado con éxito!";
+        // Enviar el correo
+        if (mail($to, $subject, $body, $headers)) {
+            echo "success"; // Enviar éxito como respuesta
+        } else {
+            echo "error"; // Enviar error si no se puede enviar el correo
+        }
     } else {
-        echo "Hubo un error al enviar el mensaje.";
+        echo "error"; // Enviar error si algún campo está vacío
     }
 }
 ?>
