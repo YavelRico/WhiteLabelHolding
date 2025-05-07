@@ -264,6 +264,9 @@ footer {
         font-size: 14px;
         line-height: 1.4;
     }
+    .logo-row a img {
+        width: 100px;
+    }
 }
 
 
@@ -395,11 +398,11 @@ footer {
     
 
     .nav-links li a {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .nav-links {
-        gap: 15px;
+        gap: 18px;
     }
     
 }
