@@ -8,18 +8,33 @@
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+<header class="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="../index.html"><img src="../images/WLHiconMenu.png" alt="Icon" class="nav-icon"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 <body>
-    <header></header>
     <main>
-        <h2>Contáctanos</h2>
-    <form id="contactForm" method="POST" action="send.php">
-        <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
-        <input type="email" id="email" name="email" placeholder="Tu Email" required>
-        <textarea id="message" name="message" placeholder="Tu Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-
-    <div id="response"></div>
+        <div class="fondo"></div>
+        <section class="contact-section">
+            <div class="fondomobile"></div>
+            <div class="contact-info">
+                <h1>Contact us</h1>
+                <div class="contact-icons">
+                    <a href="tel:+123456789"><img src="../images/phone.png" alt="Phone"></a>
+                    <a href="mailto:institutional@whitelabelholding.com"><img src="../images/mail.png" alt="Email"></a>
+                    <a href="https://www.linkedin.com/company/whitelabelllc/" target="_blank"><img src="../images/linkedin.png" alt="LinkedIn"></a>
+                </div>                
+            </div>
+        </section>
+        
     </main>
     <footer>
         <p>&copy; 2016 White Label Holding LLC. Todos los derechos reservados.</p>
