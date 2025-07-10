@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         
@@ -31,5 +32,25 @@
     <footer style="position: relative; top: 10vh; transform: translateY(-100%); text-align: center; padding: 20px; color: #f1eae4; font-size: 14px;">
         <p>&copy; 2025 White Label Holding LLC. All rights reserved.</p>
     </footer>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">×</span>
+        <img src="images/popup.png" alt="Imagen popup" />
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+      window.addEventListener('load', function () {
+        document.getElementById('popup').style.display = 'flex';
+      });
+
+      function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+    </script>
 </body>
+
 </html>
