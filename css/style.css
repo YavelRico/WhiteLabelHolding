@@ -493,3 +493,13 @@ footer {
   line-height: 35px; /* centra el texto verticalmente */
   z-index: 1000;
 }
+
+@media (max-width: 900px) {
+    .popup-content {
+        position: relative;
+        max-width: 60%;
+        max-height: 60%;
+        background: transparent;
+        padding: 10px;
+    }
+}
