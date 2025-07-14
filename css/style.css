@@ -494,11 +494,21 @@ footer {
   z-index: 1000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .popup-content {
         position: relative;
         max-width: 60%;
         max-height: 60%;
+        background: transparent;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .popup-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 100%;
         background: transparent;
         padding: 10px;
     }
